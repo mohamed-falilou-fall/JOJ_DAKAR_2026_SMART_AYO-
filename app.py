@@ -9,7 +9,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="SMART-AYO JOJ Dakar 2026",
-    page_icon="🏅",
+    page_icon="",
     layout="wide"
 )
 

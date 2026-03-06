@@ -22,13 +22,13 @@ BACKGROUND = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Olympic_
 st.markdown(
     f"""
     <style>
-
     .stApp {{
         background-image: url("{BACKGROUND}");
         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         background-attachment: fixed;
     }}
-
     </style>
     """,
     unsafe_allow_html=True

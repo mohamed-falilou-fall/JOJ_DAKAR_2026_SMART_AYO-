@@ -5,5 +5,10 @@ plotly
 matplotlib
 openpyxl
 xlsxwriter
+python-dateutil
+pytz
 Pillow
 requests
+pydeck
+scikit-learn
+xlrd

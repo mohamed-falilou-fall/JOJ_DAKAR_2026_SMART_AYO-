@@ -1,0 +1,74 @@
+smart_ayo/
+
+app.py
+auth.py
+database.py
+config.py
+
+api/
+    api_volontaires.py
+    api_cojoj.py
+    api_transport.py
+    api_securite.py
+    api_services.py
+
+apps/                          ← Applications métiers (25)
+
+    volontaires_app/
+    direction_generale_app/
+    sports_competitions_app/
+    logistique_infrastructure_app/
+    operations_app/
+    ceremonies_app/
+    relations_cio_app/
+    ressources_humaines_app/
+    communications_medias_app/
+    securite_app/
+    partenariats_sponsoring_app/
+    engagement_jeunes_app/
+    services_delegations_app/
+    transport_app/
+    hebergement_app/
+    billetterie_app/
+    finances_app/
+    environnement_app/
+    tsi_app/
+    developpement_culturel_app/
+    ter_app/
+    pompiers_app/
+    gendarmerie_app/
+    armee_app/
+
+pages/                         ← visualisation plateforme
+
+    1_Dashboard_Strategique.py
+    2_Calendrier_Operationnel.py
+    3_Sites_Sportifs.py
+    4_Gestion_Volontaires.py
+    5_Matching_IA.py
+    6_Flux_Spectateurs.py
+    7_Transport_Smart_City.py
+    8_Incidents_Terrain.py
+    9_Command_Center.py
+    10_Impact_Durable.py
+    11_Carte_JOJ_Temps_Reel.py
+    12_Prediction_Flux_IA.py
+
+modules/
+
+    ia_matching.py
+    prediction_flux_ia.py
+    optimisation_volontaires.py
+    geo_engine.py
+    smart_alerts.py
+
+data_stream/                   ← flux temps réel
+
+    ingestion_engine.py
+    event_bus.py
+    realtime_sync.py
+
+assets/
+
+    background.jpg
+    logo_joj.png

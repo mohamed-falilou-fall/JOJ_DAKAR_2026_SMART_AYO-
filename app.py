@@ -1,73 +1,83 @@
 # -*- coding: utf-8 -*-
+
 """
 SMART-AYO
-Plateforme intelligente de gestion des volontaires
+Logiciel de gestion opérationnelle
 JOJ Dakar 2026
 """
 
 import streamlit as st
+from auth import login
+from config import APP_TITLE
 
 st.set_page_config(
-    page_title="SMART-AYO JOJ Dakar 2026",
-    page_icon="",
-    layout="wide"
+    page_title=APP_TITLE,
+    layout="wide",
+    page_icon=""
 )
-
-# =========================================================
-# DESIGN GLOBAL
-# =========================================================
-
-BACKGROUND = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Olympic_flag.svg/1280px-Olympic_flag.svg.png"
-
-st.markdown(
-    f"""
-    <style>
-    /* Fond principal */
-    .stApp {{
-        background-image: url("{BACKGROUND}");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }}
-
-    /* Sidebar avec effet métallique */
-    .css-1d391kg {{
-        background: linear-gradient(145deg, #8c8c8c, #6f6f6f); /* dégradé fer */
-        box-shadow: inset 0 0 15px rgba(0,0,0,0.3); /* ombrage interne pour effet métallique */
-        font-weight: bold; /* texte en gras */
-        color: #ffffff; /* texte blanc pour contraste */
-    }}
-
-    /* Tous les éléments dans la sidebar */
-    .css-1d391kg * {{
-        color: #ffffff !important;
-        font-weight: bold !important;
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-# =========================================================
-# CONTENU PRINCIPAL
-# =========================================================
-
-st.title("SMART-AYO – Plateforme intelligente JOJ Dakar 2026")
 
 st.markdown("""
-Bienvenue dans la plateforme stratégique de pilotage des **Jeux Olympiques de la Jeunesse Dakar 2026**.
+<style>
 
-Utilisez le menu de gauche pour accéder aux différents modules :
+/* ===== IMAGE DE FOND ===== */
 
-- Dashboard stratégique
-- Calendrier opérationnel
-- Sites sportifs
-- Gestion des volontaires
-- Matching IA
-- Flux spectateurs
-- Transport Smart City
-- Incidents terrain
-- Command Center
-- Impact durable
-""")
+.stApp{
+background-image:url("https://lequotidien.sn/wp-content/uploads/2025/05/JOJ-2026.jpg");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+
+/* ===== SIDEBAR BLANCHE ===== */
+
+[data-testid="stSidebar"]{
+background-color:white;
+color:black;
+}
+
+
+/* texte sidebar lisible */
+
+[data-testid="stSidebar"] *{
+color:black !important;
+}
+
+
+/* titres */
+
+h1,h2,h3,h4{
+color:white;
+}
+
+
+/* messages */
+
+.stAlert{
+background-color:rgba(255,255,255,0.85);
+color:black;
+border-radius:10px;
+}
+
+
+/* container principal légèrement transparent */
+
+.main{
+background-color:rgba(0,0,0,0.55);
+padding:20px;
+border-radius:10px;
+}
+
+</style>
+""",unsafe_allow_html=True)
+
+user = login()
+
+if not user:
+    st.stop()
+
+st.title("SMART-AYO Command Center")
+
+st.success(f"Utilisateur connecté : {user}")
+
+st.info("Utilisez le menu de gauche pour naviguer dans les modules.")

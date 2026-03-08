@@ -62,6 +62,9 @@ modules/
     geo_engine.py
     smart_alerts.py
 
+
+    green_ai_mobility_engine.py
+
 data_stream/                   ← flux temps réel
 
     ingestion_engine.py
